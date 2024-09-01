@@ -28,7 +28,7 @@ return (
       onRequestClose={onRequestClose} // Закриття при натисканні на ESC або за межами модального вікна
       style={customStyles}
     >
-    <img src={imageUrl} alt="Modal" style={{ width: '100%', height: 'auto' }} />
+    <img src={imageUrl} alt="Modal" style={{ width: 'auto', height: '100%' }} />
                 {/* <div>
                 <p>{item.description}</p>
                 <span>Autor: { item.user.name}</span>
