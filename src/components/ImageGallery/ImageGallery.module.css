@@ -1,4 +1,4 @@
-ul {
+.ul {
   display: grid;
   grid-template-columns: repeat(3, auto);
 
@@ -11,12 +11,12 @@ ul {
   /* margin-top: 3.5rem; */
 }
 
-li {
+.li {
   list-style: none;
   transition: all 300ms;
 }
 
-li:hover {
+.li:hover {
   transform: scale(1.03);
   box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 #ffffff30;
 }
