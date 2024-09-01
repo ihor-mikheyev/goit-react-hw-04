@@ -1,0 +1,42 @@
+* {
+  box-sizing: border-box;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.searchBar {
+  display: flex;
+  max-width: 33%;
+  border: 1px solid #ffffff45;
+  border-radius: 25px;
+  overflow: hidden;
+  padding: 4px 8px;
+}
+
+.input {
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+.button {
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+  transition: transform 300ms;
+}
+.button:focus {
+  outline: none;
+}
+
+.button:hover {
+  transform: scale(1.25);
+}
