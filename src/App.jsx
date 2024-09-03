@@ -15,7 +15,7 @@ function App() {
 
   const [query, setQuery] = useState("");
   const [page, setPage] = useState(1);
-  const [totalPages, setTotalPages] = useState(999);
+  const [totalPages, setTotalPages] = useState(null);
 
   useEffect(() => {
     if (query === "") { 
@@ -34,16 +34,16 @@ function App() {
       } finally { 
         setLoading(false)
       }
-      
     }
     getData()
   }, [page, query])
   
     const handleSearch = (newQuery) => {
-    setQuery(newQuery);
+      setQuery(newQuery);
+      setError(false);
     setPage(1);
       setImages([]);
-      setTotalPages(999)
+      setTotalPages(totalPages)
     };
   
     const handleLoadMore = () => {
@@ -72,8 +72,7 @@ function App() {
       <ImageGallery items={images} onClick={openModal} />
       {error && <ErrorMessage/>}
       { loading && <Loader/>}
-      
-      {!loading && page >= totalPages && <b>End of collection!</b>}
+      {loading && page >= totalPages && <b>End of collection!</b>}
       {images.length > 0 && !loading && (
         <LoadMoreButton onClick={handleLoadMore} />)}
     <ImageModal
